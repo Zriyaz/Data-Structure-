@@ -10,7 +10,6 @@ void showstack(stack <int> s)
     } 
     cout << '\n'; 
 } 
-  
 int main () 
 { 
     stack <int> s; 

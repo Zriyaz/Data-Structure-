@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include<stdlib.h>
-int Queue[100];
+#define SIZE 10
+int Queue[SIZE];
 int isEmpty();
 int isFull();
 void Enqueue();
@@ -40,35 +41,30 @@ int main()
  }
   return 0;
 }
-
-
-
 int isEmpty()
 {
   if(rear==-1 && front==-1)
   return 1;
   else return 0;
 }
-
 int isFull()
 {
-  if(rear==size-1)
+  if(rear==SIZE-1)
   return 1;
   else return 0;
 }
-
 void Enqueue()
 {
 
     int data;
-    printf("Enter The Queue Data:");
-    scanf("%d",&data);
-        
-   if(isFull()){
+    if(isFull()){
     printf("Queue is overflow");
     return;
    }
-  else if(isEmpty())
+    printf("Enter The Queue Data:");
+    scanf("%d",&data);
+        
+  if(isEmpty())
   {
     front=rear=0;
     Queue[rear]=data;
@@ -78,9 +74,7 @@ void Enqueue()
     rear=rear+1;
     Queue[rear]=data;
   }
-  
 }
-
 void Display()
 {
   if(isEmpty())
@@ -90,7 +84,6 @@ void Display()
    printf("%d\n",Queue[i]);  
   }
 }
-
 void Dequeue()
 {
   if(isEmpty())
