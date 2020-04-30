@@ -7,7 +7,7 @@ class Queue
   stack<int>s1;
   //Method 2 (By making deQueue operation costly)
   public:
-  void enqueue(int x)
+  void push(int x)
   {
     s1.push(x);
   }
